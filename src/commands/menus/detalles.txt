@@ -1,0 +1,34 @@
+const Discord = require ('discord.js')
+module.exports = {
+    name: "detalles",
+    category: "menus",
+    description: "Menu para detallar el uso de los comandos",
+    run: async (client, message, args) => {
+message.channel.send('**'+message.author.username+'**, Revisa tus mensajes privados.');
+
+    const embed = new Discord.MessageEmbed()
+    .setAuthor(message.author.username, message.author.displayAvatarURL())
+    .addField('Ping', 'Compueba la latencia del BOT con la API de discord', true)
+    .addField('Setprefix', 'Para customizar el prefix en tu servidor', true)
+    .addField('Avatar', 'Muestra el avatar de el usuario que desees', true)
+    .addField('Stats', 'Muestra información de el servidor en que estas ubicado servidor', true)
+    .addField('Info', 'Mostrara toda la informacion importante de los usuarios.', true)
+    .addField('Canales', 'Te Permitira ver todos los canales del servidor.', true)
+    .addField('Bot', 'Mostrara la informacion general de el Bot', true)
+    .addField('Reportar Proximamente', 'Esta funcion sirve para reportar un Bug del bot, un usuario o un raideo a algun server', true)
+    .addField('Sugerencia Proximamente', 'Para poder sugerir a los owners del bot que implementen nuevas funciones para el bot y/o el server', true)
+    .addField('addrol', 'Comando para añadir rol a un usuario', true)
+    .addField('Ban', 'Banear a un usuario del servidor incluye razon.', true)
+    .addField('Kick', 'Expulsar a un usuario del servidor incluye razon.', true)
+    .addField('Clear', 'Limpiar cualquier mensaje dependiendo de la cantidad que ingreses', true)
+    .addField('Covid-g', 'Le dara un porcentaje de casos,recuperados y más del todo el mundo', true)
+    .addField('Covid-c', 'Con este comando tendra la posibilidad de ver toda la informacion relacionada a tu pais', true)
+    .addField('Desarrollador', 'Mostrara la informacion para poder ayudar a el desarrollador para que me ayudes a crecer :3', true)
+    .addField('Invitar', '[Link de invitacion](https://discord.gg/hdqA2w5)', true)
+    .setFooter("Version 1.5", client.user.avatarURL())
+    .setColor(0x66b3ff)
+    
+    message.author.send(embed);
+     }
+
+}
